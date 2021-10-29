@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# Project Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Links
 
-## Available Scripts
+- [add your github repo link]()
+- [add your deployment link]()
 
-In the project directory, you can run:
+## Project Description
 
-### `npm start`
+Use Google Books API to search for and add books to wish list, and to be able to either read them right there, download or buy them.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## API
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Google Books API
 
-### `npm test`
+- Example of console log feedback from Google Books API, fully collapsed
+```
+{data: {
+	accessInfo: {country: 'US',
+	  viewability: 'PARTIAL',
+	  embeddable: true, 
+	  publicDomain: false, 
+	  textToSpeechPermission: 'ALLOWED_FOR_ACCESSIBILITY', …}
+	etag: "MtYbHaazTVg"
+	id: "x0_GBwAAQBAJ"
+	kind: "books#volume"
+	saleInfo: {country: 'US', saleability: 'FOR_SALE', isEbook: true, listPrice: {…}, retailPrice: {…}, …}
+	searchInfo: {textSnippet: 'And he is protected, not only by his custom-fitted…y—a story of the horror, the courage, and the ...'}
+	selfLink: "https://www.googleapis.com/books/v1/volumes/x0_GBwAAQBAJ"
+	volumeInfo: {title: 'Armor', authors: Array(1), publisher: 'Penguin', publishedDate: '1984-12-04', description: 'The military sci-fi classic of courage on a danger…ength of spirit can be the greatest armor of all.', …}
+} }
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Wireframes
 
-### `npm run build`
+Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Also, define the the React components and the architectural design of your app.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [add link to your wireframes]()
+- [add link to your react architecture]()
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### MVP/PostMVP - 5min
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The functionality will then be divided into two separate lists: MPV and PostMVP. Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.
 
-### `npm run eject`
+#### MVP EXAMPLE
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Find and use external api
+- Render data on page
+- Allow user to interact with the page
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### PostMVP EXAMPLE
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Add localStorage or firebase for storage
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Components
 
-## Learn More
+##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+| Component      |                            Description                            |
+| -------------- | :---------------------------------------------------------------: |
+| App            |   This will make the initial data pull and include React Router   |
+| Search         |            This will render the header include the nav            |
+| Book Info      |          Render book info and ability to add to wishlist          |
+| WishList       | Books added will have general info rendered here on separate page |
+| Search Results |            The list of books matching search criteria             |
+| Book Text      |             If available, will post viewable contents             |
+| Footer         |            This will render the header include the nav            |
 
-### Code Splitting
+Time frames are also key in the development cycle. You have limited time to code all phases of the game. Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+| Component                | Priority | Estimated Time | Time Invetsted | Actual Time |
+| ------------------------ | :------: | :------------: | :------------: | :---------: |
+| API                      |    H     |      5hrs      |                |             |
+| React Component skeleton |    H     |      3hrs      |                |             |
+| Search bar               |    H     |      6hrs      |                |             |
+| Header/Nav               |    H     |      3hrs      |                |             |
+| Search Results           |    H     |      1hr       |                |             |
+| Book Info Window         |    H     |      3hrs      |                |             |
+| Wishlist                 |    H     |      6hrs      |                |             |
+|                          |    H     |      6hrs      |                |             |
 
-### Analyzing the Bundle Size
+## Additional Libraries
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Code Snippet
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+function reverse(string) {
+	// here is the code to reverse a string of text
+}
+```

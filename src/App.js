@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [book, setBook] = useState({});
+  const apiKey = "AIzaSyD23dM8VmKdIIOpb1gCWFHJeHbiE2qSJRQ";
+
+  const makeApiCall = (url) => {
+    fetch(url)
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setBook(data.items);
+      });
+  };
+
+  useEffect(() => {
+    const url = `https://www.googleapis.com/books/v1/volumes?q=armor+inauthor:john+steakley`
+    makeApiCall(url)
+  }, [])
+
+  const handleClick = () => {
+    console.log(book)
+    
+  }
+
+  return(
+  <div className="App">
+    <button onClick={handleClick}>test click</button>
+  </div>
+  )
 }
 
 export default App;
