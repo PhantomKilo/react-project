@@ -35,8 +35,8 @@ Google Books API
 
 Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Also, define the the React components and the architectural design of your app.
 
-- [add link to your wireframes]()
-- [add link to your react architecture]()
+- Wireframes - https://www.figma.com/file/NujeIhdYcrO8rudkYVyT2F/Untitled?node-id=27%3A16
+- React Components - https://www.figma.com/file/ThcyFnbC5x1pqT8soBOBGt/React-Compnents?node-id=0%3A1
 
 ### MVP/PostMVP - 5min
 
@@ -79,9 +79,12 @@ Time frames are also key in the development cycle. You have limited time to code
 | Search Results           |    H     |      1hr       |                |             |
 | Book Info Window         |    H     |      3hrs      |                |             |
 | Wishlist                 |    H     |      6hrs      |                |             |
-|                          |    H     |      6hrs      |                |             |
+| Tying up loose ends      |    H     |      12hrs     |                |             |
 
 ## Additional Libraries
+
+- Bootstrap
+- React-bootstrap
 
 ## Code Snippet
 
