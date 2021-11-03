@@ -1,17 +1,20 @@
 import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 
 const BookInfo = (props) => {
+  const book = props.selected;
+  const image = props.image;
 
-    const book = props.selectedBook
+  return (
+    <Col sm={12} md={6}>
+      <Card>
+        <h1>{book.title}</h1>
+        <Card.Img src={image.thumbnail} />
+        <p>{book.description}</p>
+      </Card>
+    </Col>
+  );
+};
 
-    console.log(book)
-    
-    return(
-        <Col sm={12} md={4}>
-            
-        </Col>
-    ) 
-}
-
-
-export default BookInfo
+export default BookInfo;

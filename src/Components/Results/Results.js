@@ -3,8 +3,13 @@ import Col from "react-bootstrap/Col";
 const Results = (props) => {
   const books = props.book;
   const setSelect = props.setSelectedBook;
+  const setImage = props.setImage
   const handleSelect = (book) => {
-    setSelect(book);
+    setSelect(book.volumeInfo);
+    setImage({
+      thumbnail: book.volumeInfo.imageLinks.thumbnail,
+      smallThumbnail: book.volumeInfo.imageLinks.smallThumbnail
+    })
   };
 
   const bookList = books.map((book) => {
@@ -21,7 +26,7 @@ const Results = (props) => {
 
 
   return (
-    <Col sm={12} md={8}>
+    <Col sm={12} md={6}>
       {bookList}
     </Col>
   );

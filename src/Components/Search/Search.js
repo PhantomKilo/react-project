@@ -1,3 +1,6 @@
+import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 
 const SearchBar = (props) => {
   const handleNameChange = (event) => {
@@ -9,18 +12,44 @@ const SearchBar = (props) => {
   };
 
   return (
-    <div>
-      <input type="text" onChange={handleNameChange} placeholder="Book Title" />
-      <input
-        type="text"
-        onChange={handleAuthorChange}
-        placeholder="Book Author"
-      />
-      <button variant="primary" onClick={props.handleClick}>
-        Click
-      </button>
-    </div>
+    <>
+      <Card>
+        <Col sm={12} md={4}>
+          <input
+            type="text"
+            onChange={handleNameChange}
+            placeholder="Book Title"
+          />
+        </Col>
+        <Col sm={12} md={4}>
+          <input
+            type="text"
+            onChange={handleAuthorChange}
+            placeholder="Book Author"
+          />
+        </Col>
+        <Col sm={12} md={4}>
+          <Button variant="primary" onClick={props.handleClick}>
+            Click
+          </Button>
+        </Col>
+      </Card>
+    </>
   );
 };
 
 export default SearchBar;
+
+//<Col>
+//   <Card>
+//   <input type="text" onChange={handleNameChange} placeholder="Book Title" />
+//   <input
+//     type="text"
+//     onChange={handleAuthorChange}
+//     placeholder="Book Author"
+//   />
+//   <Button variant="primary" onClick={props.handleClick}>
+//     Click
+//   </Button>
+//   </Card>
+// </Col>
