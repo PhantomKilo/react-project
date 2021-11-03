@@ -1,6 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App.js";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle";
+import "./index.css"
+import App from './Components/App/App'
 import { BrowserRouter as Router } from 'react-router-dom';
 
 // anytime a component wraps around another component...its called

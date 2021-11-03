@@ -79,7 +79,7 @@ Time frames are also key in the development cycle. You have limited time to code
 | Search Results           |    H     |      1hr       |                |             |
 | Book Info Window         |    H     |      3hrs      |                |             |
 | Wishlist                 |    H     |      6hrs      |                |             |
-| Tying up loose ends      |    H     |      12hrs     |                |             |
+| Tying up loose ends      |    H     |      12hrs      |                |             |
 
 ## Additional Libraries
 
