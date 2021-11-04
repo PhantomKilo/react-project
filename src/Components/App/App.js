@@ -9,6 +9,8 @@ import SearchBar from "../Search/Search";
 import Results from "../Results/Results";
 import Header from "../Header/Header";
 import ExpandedInfo from "../ExpandedInfo/ExpandedInfo";
+import Wishlist from "../Wishlist/Wishlist";
+
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/row";
 import Col from "react-bootstrap/Col";
@@ -20,7 +22,7 @@ function App() {
   const [searchName, setSearchName] = useState("armor");
   const [searchAuthor, setSearchAuthor] = useState("john steakley");
   const [wishlist, setWishlist] = useState([]);
-  const [selectedBook, setSelectedBook] = useState('');
+  const [selectedBook, setSelectedBook] = useState("");
   const [bookImage, setBookImage] = useState({
     thumbnail: "",
     smallThumbnail: "",
@@ -45,13 +47,14 @@ function App() {
 
   const handleClick = () => {
     makeApiCall(searchUrl);
-    console.log(selectedBook)
   };
+
+  console.log(wishlist)
 
   return (
     <div className="App">
       <Header />
-      <Container className='p-2'>
+      <Container className="p-2">
         <Row>
           <Col sm={12} md={6}>
             <Route
@@ -91,18 +94,27 @@ function App() {
               exact
               path="/"
               render={() => (
-                <BookInfo selected={selectedBook} image={bookImage} />
+                <BookInfo
+                  selected={selectedBook}
+                  image={bookImage}
+                  wishlist={wishlist}
+                  setWishlist={setWishlist}
+                />
               )}
             />
           </Col>
           <Route
             exact
-            path='/bookInfo'
+            path="/bookInfo"
             render={() => (
-              <ExpandedInfo 
-                selected={selectedBook}
-                image={bookImage}
-              />
+              <ExpandedInfo selected={selectedBook} image={bookImage} />
+            )}
+          />
+          <Route
+            exact
+            path="/wishlist"
+            render={() => (
+              <Wishlist wishlist={wishlist} setWishlist={setWishlist} />
             )}
           />
         </Row>

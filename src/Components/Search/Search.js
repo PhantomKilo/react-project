@@ -29,6 +29,7 @@ const SearchBar = (props) => {
         <Button variant="primary" onClick={props.handleClick}>
           Search Google book Api
         </Button>
+        
       </Card>
     </Col>
   );
