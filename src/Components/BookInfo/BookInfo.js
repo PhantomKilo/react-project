@@ -7,14 +7,14 @@ const BookInfo = (props) => {
   const image = props.image;
 
   return (
-    <Col sm={12} md={6}>
+    <Col>
       <Card>
-        <h1>{book.title}</h1>
         <Card.Img src={image.thumbnail} />
         <p>{book.description}</p>
+        <Button>Add to wishlist</Button>
       </Card>
     </Col>
   );
 };
 
-export default BookInfo;
+export default BookInfo

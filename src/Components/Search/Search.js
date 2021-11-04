@@ -12,44 +12,26 @@ const SearchBar = (props) => {
   };
 
   return (
-    <>
+    <Col>
       <Card>
-        <Col sm={12} md={4}>
-          <input
-            type="text"
-            onChange={handleNameChange}
-            placeholder="Book Title"
-          />
-        </Col>
-        <Col sm={12} md={4}>
-          <input
-            type="text"
-            onChange={handleAuthorChange}
-            placeholder="Book Author"
-          />
-        </Col>
-        <Col sm={12} md={4}>
-          <Button variant="primary" onClick={props.handleClick}>
-            Click
-          </Button>
-        </Col>
+        <input
+          type="text"
+          onChange={handleNameChange}
+          placeholder="Book Title"
+        />
+
+        <input
+          type="text"
+          onChange={handleAuthorChange}
+          placeholder="Book Author"
+        />
+
+        <Button variant="primary" onClick={props.handleClick}>
+          Search Google book Api
+        </Button>
       </Card>
-    </>
+    </Col>
   );
 };
 
 export default SearchBar;
-
-//<Col>
-//   <Card>
-//   <input type="text" onChange={handleNameChange} placeholder="Book Title" />
-//   <input
-//     type="text"
-//     onChange={handleAuthorChange}
-//     placeholder="Book Author"
-//   />
-//   <Button variant="primary" onClick={props.handleClick}>
-//     Click
-//   </Button>
-//   </Card>
-// </Col>
