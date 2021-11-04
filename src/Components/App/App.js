@@ -37,6 +37,11 @@ function App() {
       })
       .then((data) => {
         setBook(data.items);
+        setSelectedBook(data.items[0].volumeInfo)
+        setBookImage({
+          thumbnail: data.items[0].volumeInfo.imageLinks.thumbnail,
+          smallThumbnail: data.items[0].volumeInfo.imageLinks.smallThumbnail
+        })
       });
   };
 
