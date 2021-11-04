@@ -6,7 +6,7 @@ const Results = (props) => {
   const setSelect = props.setSelectedBook;
   const setImage = props.setImage;
   let bookImage = ''
-  const placeHolder = 'https://image.shutterstock.com/image-vector/image-preview-icon-picture-placeholder-260nw-1716511726.jpg'
+  const placeHolder = 'https://blog.springshare.com/wp-content/uploads/2010/02/nc-md.gif'
   const handleSelect = (book) => {
     setSelect(book.volumeInfo);
     if (book.volumeInfo.imageLinks === undefined) {
@@ -30,11 +30,11 @@ const Results = (props) => {
       bookImage = book.volumeInfo.imageLinks.thumbnail
     }
     return (
-      <Row>
-        <Col sm={6}>
+      <Row key={book.etag}>
+        <Col>
           <img src={bookImage} />
         </Col>
-        <Col key={book.etag}>
+        <Col>
           <h3>Title: {book.volumeInfo.title}</h3>
           <p key={book.volumeInfo.authors[0]}>
             Author: {book.volumeInfo.authors[0]}
