@@ -59,7 +59,7 @@ function App() {
           <Col sm={12} md={6}>
             <Route
               exact
-              path="/react-project"
+              path="/homepage"
               render={() => (
                 <SearchBar
                   setBook={setBook}
@@ -72,7 +72,7 @@ function App() {
 
             <Route
               exact
-              path="/react-project"
+              path="/homepage"
               render={() => (
                 <Results
                   book={book}
@@ -86,13 +86,13 @@ function App() {
           <Col sm={12} md={6}>
             <Route
               exact
-              path="/react-project"
+              path="/homepage"
               render={() => <DescriptionHead selected={selectedBook} />}
             />
 
             <Route
               exact
-              path="/react-project"
+              path="/homepage"
               render={() => (
                 <BookInfo
                   selected={selectedBook}
@@ -105,14 +105,14 @@ function App() {
           </Col>
           <Route
             exact
-            path="/react-project/bookInfo"
+            path="/bookInfo"
             render={() => (
               <ExpandedInfo selected={selectedBook} image={bookImage} />
             )}
           />
           <Route
             exact
-            path="/react-project/wishlist"
+            path="/wishlist"
             render={() => (
               <Wishlist
                 wishlist={wishlist}

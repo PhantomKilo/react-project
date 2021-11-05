@@ -7,12 +7,12 @@ const Header = () => {
     return(
         <Navbar bg='light' expand='md'>
         <Container>
-            <Navbar.Brand><Link to="/react-project">Home</Link></Navbar.Brand>
+            <Navbar.Brand><Link to="/honmepage">Home</Link></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
-            <Link className="nav-link" to="/react-project/bookInfo">Expanded info</Link>
-            <Link className="nav-link" to="/react-project/wishlist">Wishlist</Link>
+            <Link className="nav-link" to="/bookInfo">Expanded info</Link>
+            <Link className="nav-link" to="/wishlist">Wishlist</Link>
         </Nav>
       </Navbar.Collapse>
         </Container>
