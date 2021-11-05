@@ -7,7 +7,7 @@ const Header = () => {
     return(
         <Navbar bg='light' expand='md'>
         <Container>
-            <Navbar.Brand><Link to="/honmepage">Home</Link></Navbar.Brand>
+            <Navbar.Brand><Link to="/">Home</Link></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">

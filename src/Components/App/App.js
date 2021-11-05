@@ -72,7 +72,7 @@ function App() {
 
             <Route
               exact
-              path="/homepage"
+              path="/"
               render={() => (
                 <Results
                   book={book}
@@ -86,13 +86,13 @@ function App() {
           <Col sm={12} md={6}>
             <Route
               exact
-              path="/homepage"
+              path="/"
               render={() => <DescriptionHead selected={selectedBook} />}
             />
 
             <Route
               exact
-              path="/homepage"
+              path="/"
               render={() => (
                 <BookInfo
                   selected={selectedBook}
