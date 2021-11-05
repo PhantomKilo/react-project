@@ -37,11 +37,11 @@ function App() {
       })
       .then((data) => {
         setBook(data.items);
-        setSelectedBook(data.items[0].volumeInfo)
+        setSelectedBook(data.items[0].volumeInfo);
         setBookImage({
           thumbnail: data.items[0].volumeInfo.imageLinks.thumbnail,
-          smallThumbnail: data.items[0].volumeInfo.imageLinks.smallThumbnail
-        })
+          smallThumbnail: data.items[0].volumeInfo.imageLinks.smallThumbnail,
+        });
       });
   };
 
@@ -53,8 +53,6 @@ function App() {
   const handleClick = () => {
     makeApiCall(searchUrl);
   };
-
-  console.log(wishlist)
 
   return (
     <div className="App">
@@ -119,7 +117,12 @@ function App() {
             exact
             path="/wishlist"
             render={() => (
-              <Wishlist wishlist={wishlist} setWishlist={setWishlist} />
+              <Wishlist
+                wishlist={wishlist}
+                setWishlist={setWishlist}
+                setSelectedBook={setSelectedBook}
+                setBookImage={setBookImage}
+              />
             )}
           />
         </Row>
