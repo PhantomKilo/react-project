@@ -59,7 +59,7 @@ function App() {
           <Col sm={12} md={6}>
             <Route
               exact
-              path="/homepage"
+              path="/"
               render={() => (
                 <SearchBar
                   setBook={setBook}
